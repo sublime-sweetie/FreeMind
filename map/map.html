@@ -3,16 +3,12 @@
   <head>
     <title>Resource Map</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <!-- playground-hide -->
-    <script>
+    <!-- <script>
       const process = { env: {} };
       process.env.GOOGLE_MAPS_API_KEY =
         "AIzaSyCn-gvMvru5lgLwSVtR1rrejaRC3I1yaHU";
-    </script>
-    <!-- playground-hide-end -->
-    <link rel="javascript" src="./map.js"></link>
-    <!-- style links -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    </script> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./map.css">
   </head>
   
@@ -21,6 +17,7 @@
       <nav class="Nav-container">
         <div class="new-new">
           <h2>Health Resources</h2>
+          
         </div>
   
           <ul class="main-nav">
@@ -40,24 +37,18 @@
    </header>
    <main>
     <div id="container">
-      <div id="map" id="demo" ></div>
-      <div ></div>
+      <div id="map" ></div>
+      <div id="demo" ></div>
       <div id="sidebar" class="results">
         <h2>Results</h2>
         <ul id="places"></ul>
-        <button class="calc-btn button is-warning" id="more">Load more results</button>
+        <button style="font-size:24px;color:blue" id="more">Load More <i class="material-icons">local_pharmacy</i></button>
       </div>
     </div>
   </main>
-    <!-- 
-     The `defer` attribute causes the callback to execute after the full HTML
-     document has been parsed. For non-blocking uses, avoiding race conditions,
-     and consistent behavior across browsers, consider loading using Promises
-     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
-    -->
-
-<link async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn-gvMvru5lgLwSVtR1rrejaRC3I1yaHU&libraries=geometry&callback=initMap">
-</link>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn-gvMvru5lgLwSVtR1rrejaRC3I1yaHU&libraries=geometry,places&callback=initMap">
+</script>
+<script rel="module" src="./map.js"></script>
   </body>
 </html>
