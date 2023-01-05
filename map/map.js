@@ -1,6 +1,7 @@
 // Create the map.
 function initMap() {
-    
+
+
     var x = document.getElementById("demo");
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
@@ -18,7 +19,7 @@ function initMap() {
   
       var coords = {lat, lng}
   
-  
+      
   
         // Create the map.
         const map = new google.maps.Map(document.getElementById("map"), {
@@ -40,7 +41,7 @@ function initMap() {
       
         // Perform a nearby search.
         service.nearbySearch(
-          { location: coords, radius: 5000, type: "health-resources" },
+          { location: coords, radius: 5000, type: "doctor" },
           (results, status, pagination) => {
             if (status !== "OK" || !results) return;
       
@@ -58,15 +59,20 @@ function initMap() {
       
       function addPlaces(places, map) {
         const placesList = document.getElementById("places");
-      
+        // const image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
         for (const place of places) {
           if (place.geometry && place.geometry.location) {
             const image = {
-              url: place.icon,
-              size: new google.maps.Size(71, 71),
-              origin: new google.maps.Point(0, 0),
+            //   url: place.icon,
+            //   size: new google.maps.Size(71, 71),
+            //   origin: new google.maps.Point(0, 0),
               anchor: new google.maps.Point(17, 34),
-              scaledSize: new google.maps.Size(25, 25),
+            //   scaledSize: new google.maps.Size(25, 25),
+              fillColor: "blue",
+              fillOpacity: 0.6,
+              strokeWeight: 0,
+              rotation: 0,
+              scale: 2,
             };
       
             new google.maps.Marker({
@@ -75,7 +81,7 @@ function initMap() {
               title: place.name,
               position: place.geometry.location,
             });
-      
+            
             const li = document.createElement("li");
       
             li.textContent = place.name;
@@ -87,5 +93,5 @@ function initMap() {
         }
       }
     }
-      window.initMap = initMap;
-  
+      window.initMap= initMap;
+      
