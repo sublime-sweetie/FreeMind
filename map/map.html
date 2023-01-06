@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Resource Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- <script>
+      const process = { env: {} };
+      process.env.GOOGLE_MAPS_API_KEY =
+        "AIzaSyCn-gvMvru5lgLwSVtR1rrejaRC3I1yaHU";
+    </script> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./map.css">
+  </head>
+  
+  <body>
+    <header class="navbar-official">
+      <nav class="Nav-container">
+        <div class="new-new">
+          <h2>Health Resources</h2>
+          
+        </div>
+  
+          <ul class="main-nav">
+            <li><a href="#.html">Document symptoms</a></li>
+            <li><a href="#.html">Login</a></li>
+            <li><a href="map.html">Maps</a></li>
+        </ul>
+
+      <!-- second nav bar revealed at 390px -->
+      <nav class="burgerbar">
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+          </a>
+      </nav>
+   </header>
+   <main>
+    <div id="container">
+      <div id="map" ></div>
+      <div id="demo" ></div>
+      <div id="sidebar" class="results">
+        <h2>Results</h2>
+        <ul id="places"></ul>
+        <button style="font-size:24px;color:blue" id="more">Load More <i class="material-icons">local_pharmacy</i></button>
+      </div>
+    </div>
+  </main>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCn-gvMvru5lgLwSVtR1rrejaRC3I1yaHU&libraries=geometry,places&callback=initMap">
+</script>
+<script rel="module" src="./map.js"></script>
+  </body>
+</html>
