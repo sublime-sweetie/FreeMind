@@ -42,9 +42,9 @@ function initMap() {
             query: 'ABA',
             fields: ['name', 'geometry'],
           }
-        // Perform a nearby search.
+        // Perform a nearby search for Family therapists.
         service.nearbySearch(
-          { location: coords, radius: 1000000, keyword:"ABA Therapy"},
+          { location: coords, radius: 1000000, keyword:"Family Therapy"},
           (results, status, pagination) => {
             if (status !== "OK" || !results) return;
       
@@ -83,7 +83,7 @@ function initMap() {
               
             });
             
-            const li = document.createElement("p");
+            const li = document.createElement("li");
       
             li.textContent = place.name;
             placesList.appendChild(li);
