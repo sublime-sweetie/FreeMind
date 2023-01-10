@@ -18,4 +18,7 @@ app.get('/', (req, res) =>{
     res.send("Thank you for joining us")
 })
 
+const PORT =process.env.PORT || 4000
+
+
 app.listen(4000);
