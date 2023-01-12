@@ -13,8 +13,7 @@ Users must have a computer or mobile devise with a web brouser such as Chrome in
 
 USers can log in and review their old journal enteries or serch the resource map to find a provider that fits their needs.
 
-![resource maps](assets/images/screenshot.png)
-
+![resource maps](assets/images/homepage.PNG)
 ## Credits
 
 Jeniah Turner: https://github.com/turnerjeniah8

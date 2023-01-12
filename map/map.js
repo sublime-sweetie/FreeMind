@@ -44,7 +44,7 @@ function initMap() {
           }
         // Perform a nearby search.
         service.nearbySearch(
-          { location: coords, radius: 1000000, keyword:"ABA Therapy"},
+          { location: coords, radius: 10000, keyword:"Behavior therapy"},
           (results, status, pagination) => {
             if (status !== "OK" || !results) return;
       
